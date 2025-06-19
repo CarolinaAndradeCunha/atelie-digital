@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff8080;
+  color: #0b0b0b;
+}
+
+/* Página inicial */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+/* Bloco branco central */
+.box-branco {
+  background-color: #f8f3f2;
+  border-radius: 2rem;
+  padding: 3rem;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  animation: subir 0.8s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Container para imagem + texto */
+.texto-e-foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Foto ao lado do nome */
+.perfil-foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #dab031;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Título e subtítulo */
+.texto-apresentacao h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #0b0b0b;
+}
+
+.subtexto {
+  font-size: 1.2rem;
+  color: #d52d44;
+  margin-bottom: 2rem;
+}
+
+/* Botões */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #ff4d4d;
+  color: #f8f3f2;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0b0b0b;
+  transform: scale(1.05);
+}
+
+/* Contato discreto */
+.contato-discreto {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.contato-discreto p {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contato-discreto img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.contato-discreto a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contato-discreto a:hover {
+  color: #dab031;
+}
+
+/* Animação */
+@keyframes subir {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .box-branco {
+    padding: 2rem 1.5rem;
+  }
+
+  .texto-e-foto {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .texto-apresentacao h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtexto {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contato-discreto p {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto-apresentacao h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtexto {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .perfil-foto {
+    width: 100px;
+    height: 100px;
+  }
+
+  .box-branco {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+}
