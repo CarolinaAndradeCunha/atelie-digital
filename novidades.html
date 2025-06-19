@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Novidades | Ateliê Digital</title>
+  <link rel="stylesheet" href="novidades.css" />
+  <!-- FontAwesome para ícones -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="topo">
+    <div class="marca">
+      <div class="icone-circulo">
+        <img src="images/symbol.png" alt="Logo" />
+      </div>
+      <span>Ateliê Digital</span>
+    </div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="novidades.html" class="ativo">Novidades</a>
+      <a href="projetos.html">Projetos</a>
+              <a href="perguntas.html">Perguntas</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section class="novidade">
+      <h1>Em breve</h1>
+      <button id="botao-raspadinha">Clique e descubra</button>
+      <p id="mensagem-novidade"></p>
+    </section>
+
+    <section class="votacao-container">
+      <h2>E depois, o que você quer ver aqui?</h2>
+      <div class="votacao">
+        <button class="voto">Versão app dos sites</button>
+        <button class="voto">App de jogo</button>
+        <button class="voto">App pessoal</button>
+      </div>
+      <p id="resposta-voto"></p>
+    </section>
+
+    <section class="sugestao-container">
+      <h2>Deixe sua sugestão anônima</h2>
+      <form id="form-sugestao" action="https://formspree.io/f/seu-id-aqui" method="POST">
+        <label for="sugestao">O que mais você gostaria de ver por aqui?</label>
+        <textarea id="sugestao" name="sugestao" rows="4" placeholder="Digite sua sugestão aqui..." required></textarea>
+        <button type="submit" class="btn-enviar">Enviar sugestão</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="rodape">
+    <p>
+      <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5515996613124" target="_blank">(15) 996613124</a> |
+      <i class="fas fa-envelope"></i> <a href="mailto:andradecunhacarolina@gmail.com">andradecunhacarolina@gmail.com</a> |
+      <i class="fab fa-youtube"></i> <a href="https://www.youtube.com/@dot-atelie-digital" target="_blank">@dot-atelie-digital</a>
+    </p>
+  </footer>
+
+  <script src="novidades.js"></script>
+</body>
+</html>
