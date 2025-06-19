@@ -1,0 +1,287 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== CORES ===== */
+:root {
+  --rosa-claro: #ff8080;
+  --rosa-escuro: #ff4d4d;
+  --bege-claro: #f8f3f2;
+  --preto: #3e2f2f;
+  --verde-whatsapp: #25d366;
+}
+
+/* ===== GERAL ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bege-claro);
+  color: var(--preto);
+  padding-top: 70px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== HEADER ===== */
+.topo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--rosa-claro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.icone-circulo {
+  background-color: var(--rosa-escuro);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.icone-circulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  color: var(--preto);
+}
+
+/* ===== BOTÃO MENU HAMBÚRGUER ===== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVO HEADER ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    z-index: 1100;
+  }
+
+  .topo {
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--rosa-claro);
+    margin-top: 10px;
+    padding: 0.5rem 0;
+    border-radius: 0 0 8px 8px;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+
+  .menu a {
+    margin: 0.5rem 1rem;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    max-height: 200px;
+  }
+}
+
+/* ===== FAQ ===== */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.faq-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--preto);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.faq-descricao {
+  text-align: center;
+  color: var(--preto);
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--rosa-escuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: "↓";
+  font-size: 1.4rem;
+  transition: transform 0.3s;
+  margin-left: 10px;
+}
+
+.faq-item.ativo .faq-question::after {
+  content: "↑";
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 0.5rem;
+  color: #333;
+  line-height: 1.6;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rosa-claro) transparent;
+}
+
+.faq-item.ativo .faq-answer {
+  display: block;
+}
+
+/* ===== BOTÃO WHATSAPP ===== */
+.btn-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-whatsapp {
+  background-color: var(--verde-whatsapp);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* ===== RODAPÉ CONTATO ===== */
+.contato-discreto {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.contato-discreto p {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contato-discreto span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contato-discreto i {
+  font-size: 1rem;
+  color: #999;
+}
+
+.contato-discreto a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contato-discreto a:hover {
+  color: var(--rosa-escuro);
+}
