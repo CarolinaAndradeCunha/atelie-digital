@@ -96,36 +96,42 @@ main h1, main h2 {
 }
 
 /* ===== BOTÃO RASPADINHA ===== */
-#botao-raspadinha {
-  background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-escuro));
-  border: none;
-  color: white;
-  padding: 1rem 2rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+.revelacao {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#neblina-container {
   position: relative;
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-#botao-raspadinha:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(135deg, #ff6666, #ff1f1f);
-}
-
-#botao-raspadinha:active {
-  transform: scale(0.97);
-}
-
-#mensagem-novidade {
-  margin-top: 30px;
-  font-size: 1.2rem;
+#mensagem-escondida {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d63447;
   font-weight: bold;
-  color: var(--preto);
-  min-height: 40px;
+  background: linear-gradient(to right, #fff6f6, #fff0f0);
+  z-index: 0;
+}
+
+#neblina-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* ===== VOTAÇÃO ===== */
