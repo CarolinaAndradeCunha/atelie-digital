@@ -224,4 +224,15 @@ a {
   .menu {
     position: relative;
   }
+  
+  .rodape {
+    font-size: 0.8rem;
+    padding: 1rem 1rem;
+    line-height: 1.4;
+  }
+
+  .rodape a {
+    margin: 0 0.2rem;
+    display: inline-block; /* para facilitar toque */
+  }
 }
