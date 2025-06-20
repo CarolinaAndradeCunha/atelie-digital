@@ -135,10 +135,14 @@
   </footer>
 
 <button id="btn-topo" title="Voltar ao topo">↑</button>
-<div id="modal-img" class="modal-img escondido">
-  <span id="fechar-modal" class="fechar-modal">&times;</span>
-  <img id="img-modal" src="" alt="Imagem Ampliada">
+<!-- Modal de Imagem -->
+<div id="modal-img" class="modal escondido" role="dialog" aria-modal="true">
+  <div class="modal-conteudo">
+    <button id="fechar-modal" class="fechar-modal" aria-label="Fechar modal">×</button>
+    <img id="img-modal" src="" alt="Imagem ampliada">
+  </div>
 </div>
+
 </body>
     <script src="servicos.js"></script>
 </html>
