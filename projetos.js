@@ -1,18 +1,16 @@
 // MENU MOBILE
 const btnMenu = document.querySelector('.btn-menu');
-const menu = document.querySelector('.menu');
+const menuLista = document.querySelector('.menu-lista');
 
-if (btnMenu && menu) {
-  const links = menu.querySelectorAll('a');
-
+if (btnMenu && menuLista) {
   btnMenu.addEventListener('click', () => {
-    const ativo = menu.classList.toggle('ativo');
+    const ativo = menuLista.classList.toggle('ativo');
     btnMenu.setAttribute('aria-expanded', ativo);
   });
 
-  links.forEach(link => {
+  menuLista.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      menu.classList.remove('ativo');
+      menuLista.classList.remove('ativo');
       btnMenu.setAttribute('aria-expanded', false);
     });
   });
