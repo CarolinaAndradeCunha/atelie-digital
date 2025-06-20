@@ -17,35 +17,30 @@ const modalImg = document.getElementById('img-modal');
 const fecharModal = document.getElementById('fechar-modal');
 
 function fecharModalImagem() {
-  if (modal && modalImg) {
-    modal.classList.add('escondido');
-    modalImg.src = '';
+  modal.classList.add('escondido');
+  modalImg.src = '';
+}
+
+document.querySelectorAll('.mini-galeria img').forEach(img => {
+  img.addEventListener('click', () => {
+    modalImg.src = img.src;
+    modal.classList.remove('escondido');
+  });
+});
+
+fecharModal.addEventListener('click', fecharModalImagem);
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    fecharModalImagem();
   }
-}
+});
 
-if (modal && modalImg && fecharModal) {
-  document.querySelectorAll('.mini-galeria img').forEach(img => {
-    img.addEventListener('click', () => {
-      modalImg.src = img.src;
-      modal.classList.remove('escondido');
-    });
-  });
-
-  fecharModal.addEventListener('click', fecharModalImagem);
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      fecharModalImagem();
-    }
-  });
-
-  // Acessibilidade: fechar com Esc
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.classList.contains('escondido')) {
-      fecharModalImagem();
-    }
-  });
-}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !modal.classList.contains('escondido')) {
+    fecharModalImagem();
+  }
+});
 
 // === MENU MOBILE (hambúrguer) ===
 document.addEventListener('DOMContentLoaded', () => {
