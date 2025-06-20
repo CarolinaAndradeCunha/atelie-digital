@@ -7,10 +7,7 @@
   <link rel="icon" href="images/atelie-digital.png" type="image/x-icon" />
   <link rel="stylesheet" href="projetos.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header class="topo">
@@ -21,7 +18,9 @@
       Atelie Digital
     </a>
     <nav class="menu">
-      <button class="btn-menu" aria-label="Abrir menu">&#9776;</button>
+      <button class="btn-menu" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="servicos.html">Serviços</a></li>
@@ -30,76 +29,58 @@
         <li><a href="perguntas.html">Perguntas</a></li>
       </ul>
     </nav>
-    <button class="btn-menu" aria-label="Abrir menu">
-      <i class="fas fa-bars"></i>
-    </button>
   </header>
 
-  <section class="projetos-reais">
-    <h2>Projetos Reais</h2>
-    <div class="card-projeto animar">
-      <img
-        src="images/previa-site-ana.png"
-        alt="Prévia do site da Dra. Ana Paula"
-        class="previa-site"
-      />
-      <h3>
-        <a href="https://tatuipsicoaba.com/" target="_blank"
-          >(Psicóloga ABA) Dra. Ana Paula Uchoa</a
-        >
-      </h3>
-      <div class="texto-curto">
-        <p>
-          Psicóloga pioneira em Terapia Snoezelen em Tatuí-SP, Ana Paula é
-          especialista no cuidado de crianças e adolescentes atípicos,
-          utilizando estratégias da ciência ABA e um atendimento humanizado.
-        </p>
+  <main>
+    <section class="projetos-reais">
+      <h2>Projetos Reais</h2>
+      <div class="card-projeto">
+        <img
+          src="images/previa-site-ana.png"
+          alt="Prévia do site da Dra. Ana Paula"
+          class="previa-site"
+        />
+        <h3>
+          <a href="https://tatuipsicoaba.com/" target="_blank">
+            (Psicóloga ABA) Dra. Ana Paula Uchoa
+          </a>
+        </h3>
+        <div class="texto-curto">
+          <p>
+            Psicóloga pioneira em Terapia Snoezelen em Tatuí-SP, Ana Paula é especialista no cuidado de crianças e adolescentes atípicos, utilizando estratégias da ciência ABA e um atendimento humanizado.
+          </p>
+        </div>
+        <div class="texto-completo">
+          <p>
+            Seu olhar é sensível, ético e afetuoso — sempre respeitando o ritmo e as necessidades de cada indivíduo.
+          </p>
+          <p>
+            Além da clínica tradicional, ela oferece sessões em um ambiente multisensorial Snoezelen: um espaço estruturado com luzes suaves, texturas, sons e aromas que promovem relaxamento, vínculo e bem-estar.
+          </p>
+          <p>
+            Um diferencial que transforma o processo terapêutico em algo seguro, livre de cobranças e verdadeiramente acolhedor.
+          </p>
+          <p>
+            E olha só: ela mesma escolheu as cores e a essência do site, feito por mim com todo cuidado para refletir exatamente quem ela é. Porque quando o profissional tem bom gosto, o projeto brilha — e esse com certeza é um daqueles que dá gosto de divulgar.
+          </p>
+        </div>
+        <button class="ver-mais">Ver mais</button>
+        <a href="https://tatuipsicoaba.com" class="botao-visitar" target="_blank">Ver Projeto</a>
       </div>
-      <div class="texto-completo escondido">
-        <p>
-          Seu olhar é sensível, ético e afetuoso — sempre respeitando o ritmo e
-          as necessidades de cada indivíduo.
-        </p>
-        <p>
-          Além da clínica tradicional, ela oferece sessões em um ambiente
-          multisensorial Snoezelen: um espaço estruturado com luzes suaves,
-          texturas, sons e aromas que promovem relaxamento, vínculo e
-          bem-estar.
-        </p>
-        <p>
-          Um diferencial que transforma o processo terapêutico em algo seguro,
-          livre de cobranças e verdadeiramente acolhedor.
-        </p>
-        <p>
-          E olha só: ela mesma escolheu as cores e a essência do site, feito por
-          mim com todo cuidado para refletir exatamente quem ela é. Porque
-          quando o profissional tem bom gosto, o projeto brilha — e esse com
-          certeza é um daqueles que dá gosto de divulgar.
-        </p>
-      </div>
-      <button class="ver-mais">Ver mais</button>
-      <a
-        href="https://tatuipsicoaba.com"
-        class="botao-visitar"
-        target="_blank"
-        >Ver Projeto</a
-      >
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="rodape">
     <p>
       <i class="fab fa-whatsapp"></i>
-      <a href="https://wa.me/5515996613124" target="_blank">(15) 996613124</a> |
+      <a href="https://wa.me/5515996613124" target="_blank">(15) 99661-3124</a> |
       <i class="fas fa-envelope"></i>
       <a href="mailto:andradecunhacarolina@gmail.com">andradecunhacarolina@gmail.com</a> |
       <i class="fab fa-youtube"></i>
-      <a href="https://www.youtube.com/@dot-atelie-digital" target="_blank"
-        >@dot-atelie-digital</a
-      >
+      <a href="https://www.youtube.com/@dot-atelie-digital" target="_blank">@dot-atelie-digital</a>
     </p>
   </footer>
 
-  <script src="projetos.js"></script>
+  <script src="projetos.js" defer></script>
 </body>
 </html>
