@@ -5,7 +5,7 @@
   --bege-claro: #f8f3f2;
   --preto: #3e2f2f;
   --verde-whatsapp: #25d366;
-  --dourado: #d9b464;
+  --dourado-claro: #d4af37;
 }
 
 /* ===== RESET ===== */
@@ -15,14 +15,12 @@
   box-sizing: border-box;
 }
 
-/* ===== PREVENIR OVERFLOW HORIZONTAL ===== */
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
   width: 100%;
 }
 
-/* ===== BODY ===== */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bege-claro);
@@ -61,6 +59,7 @@ body {
 
 .icone-circulo {
   background-color: var(--rosa-escuro);
+  border: 2px solid var(--dourado-claro);
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -69,7 +68,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  border: 2px solid var(--dourado);
 }
 
 .icone-circulo img {
@@ -122,7 +120,6 @@ body {
   color: var(--preto);
 }
 
-/* ===== MAIN ===== */
 main {
   max-width: 1100px;
   margin: 2rem auto;
@@ -132,14 +129,12 @@ main {
   box-sizing: border-box;
 }
 
-/* ===== TÍTULOS CENTRALIZADOS ===== */
 main h2,
 main h3.subtitulo-modelos,
 main h4 {
   text-align: center;
 }
 
-/* ===== TÍTULOS ESTILO ===== */
 h2 {
   font-size: 2rem;
   color: var(--rosa-escuro);
@@ -159,6 +154,8 @@ h3.subtitulo-modelos {
   font-weight: 600;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  display: block;
+  width: 100%;
 }
 
 h4 {
@@ -171,7 +168,6 @@ h4 {
   overflow-wrap: break-word;
 }
 
-/* ===== TEXTO EXPLICATIVO ===== */
 .observacao {
   max-width: 700px;
   margin: 0 auto 2rem auto;
@@ -187,7 +183,6 @@ h4 {
   overflow-wrap: break-word;
 }
 
-/* ===== GRID MODELOS ===== */
 .grid-modelos {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +196,6 @@ h4 {
   max-width: 100%;
 }
 
-/* ===== CARDS MODELOS ===== */
 .card-modelo {
   background-color: white;
   border: 1px solid #ddd;
@@ -238,10 +232,27 @@ h4 {
   max-width: 100%;
 }
 
-/* Mini Galeria (padrão antigo, ainda em uso em outros cards) */
+.card-modelo h3,
+.card-modelo h3 a {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--preto);
+  text-decoration: none;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.card-modelo h3 a:hover {
+  color: var(--rosa-escuro);
+  text-decoration: underline;
+}
+
 .mini-galeria {
   display: flex;
-  gap: 0.4rem;
+  flex-direction: column;
+  gap: 0.6rem;
   margin: 0.5rem 0;
   justify-content: center;
   overflow-x: auto;
@@ -250,70 +261,21 @@ h4 {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.mini-galeria img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  flex-shrink: 0;
-  max-width: 100%;
-}
-
-/* Mini Galeria com título (nova versão) */
-.mini-galeria-com-titulo {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 0.5rem 0 1rem 0;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 0 0.5rem;
-  box-sizing: border-box;
-}
-
-.item-galeria {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 90px;
-  max-width: 100%;
+}
+
+.link-site-previa {
+  font-size: 0.8rem;
   text-align: center;
-}
-
-.item-galeria img {
-  width: 100%;
-  height: auto;
-  max-height: 120px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.item-galeria img:hover {
-  transform: scale(1.05);
-}
-
-.titulo-site {
-  display: block;
-  margin-top: 0.3rem;
-  font-size: 0.75rem;
   color: var(--rosa-escuro);
-  font-weight: 600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-site-previa:hover {
   text-decoration: underline;
-  transition: color 0.3s ease;
 }
 
-.item-galeria a:hover .titulo-site {
-  color: var(--preto);
-}
-
-/* Lista */
 .lista-word,
 .lista-excel {
   text-align: left;
@@ -333,7 +295,6 @@ h4 {
   line-height: 1.3;
 }
 
-/* Botão consultar */
 .botao-consultar {
   margin-top: auto;
   background-color: var(--verde-whatsapp);
@@ -354,7 +315,6 @@ h4 {
   background-color: #1ebe57;
 }
 
-/* Modal imagem */
 .modal-img {
   position: fixed;
   top: 0;
@@ -389,7 +349,6 @@ h4 {
   display: none !important;
 }
 
-/* Rodapé */
 .rodape {
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -423,7 +382,6 @@ h4 {
   color: var(--rosa-escuro);
 }
 
-/* Botão voltar ao topo */
 #btn-topo {
   position: fixed;
   bottom: 30px;
@@ -444,18 +402,16 @@ h4 {
   background-color: #e04343;
 }
 
-/* ===== MEDIA QUERIES ===== */
 @media (max-width: 900px) {
   .grid-modelos {
     padding-left: 1rem;
     padding-right: 0.5rem;
     scroll-padding-left: 1rem;
   }
-
   .card-modelo {
     width: 160px;
     padding: 0.8rem;
-    min-height: 250px;
+    min-height: 240px;
     max-width: 100%;
   }
 }
@@ -464,7 +420,6 @@ h4 {
   .btn-menu {
     display: block;
   }
-
   .menu ul {
     flex-direction: column;
     position: fixed;
@@ -479,39 +434,32 @@ h4 {
     border-bottom-left-radius: 10px;
     z-index: 1000;
   }
-
   .menu ul.ativo {
     max-height: 500px;
     overflow-y: auto;
   }
-
   .menu ul li {
     padding: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-
   .menu ul li:last-child {
     border-bottom: none;
   }
-
   nav a {
     font-size: 1.1rem;
     display: block;
     width: 100%;
     text-align: left;
   }
-
   .grid-modelos {
     justify-content: center;
   }
-
   .card-modelo {
     width: 140px;
     padding: 0.7rem;
-    min-height: 230px;
+    min-height: 200px;
     max-width: 100%;
   }
-
   .mini-galeria img {
     width: 50px;
     height: 50px;
