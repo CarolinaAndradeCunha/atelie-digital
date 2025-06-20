@@ -1,7 +1,19 @@
-  function toggleMenu() {
-    const menu = document.getElementById("menuMobile");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnMenu = document.querySelector('.btn-menu');
+    const nav = document.querySelector('.menu');
 
+    btnMenu.addEventListener('click', () => {
+      nav.classList.toggle('ativo');
+    });
+
+    // Fecha o menu ao clicar em qualquer link
+    const links = nav.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('ativo');
+      });
+    });
+  });
 document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('neblina-canvas');
   const ctx = canvas.getContext('2d');
