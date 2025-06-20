@@ -5,9 +5,22 @@ document.querySelectorAll('.faq-question').forEach(question => {
   });
 });
 
-const toggleBtn = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
+// === MENU MOBILE (hambúrguer) ===
+  const btnMenu = document.querySelector('.btn-menu');
+  const menuUl = document.querySelector('.menu ul');
 
-toggleBtn.addEventListener('click', () => {
-  menu.classList.toggle('ativo');
-});
+  if (btnMenu && menuUl) {
+    const links = menuUl.querySelectorAll('a');
+
+    btnMenu.addEventListener('click', () => {
+      const isActive = menuUl.classList.toggle('ativo');
+      btnMenu.setAttribute('aria-expanded', isActive);
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuUl.classList.remove('ativo');
+        btnMenu.setAttribute('aria-expanded', false);
+      });
+    });
+  }
