@@ -51,7 +51,6 @@ body {
 
 .icone-circulo {
   background-color: var(--rosa-escuro);
-  border: 2px solid var(--dourado-claro);
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -88,21 +87,13 @@ body {
 }
 
 /* ===== BOTÃO HAMBURGUER ===== */
-.hamburger {
+.btn-menu {
   display: none;
-  flex-direction: column;
-  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
-  gap: 5px;
-}
-
-.hamburger span {
-  background-color: white;
-  height: 3px;
-  width: 100%;
-  border-radius: 2px;
 }
 
 /* ===== MENU MOBILE ===== */
@@ -112,8 +103,9 @@ body {
   width: 100%;
   background-color: var(--rosa-claro);
   position: absolute;
-  top: 60px;
+  top: 70px;
   left: 0;
+  z-index: 999;
   padding: 10px 20px;
 }
 
@@ -295,12 +287,12 @@ main h2 {
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
   .menu {
     display: none;
+  }
+
+  .btn-menu {
+    display: block;
   }
 
   .menu-mobile {
