@@ -238,6 +238,36 @@ h4 {
   text-decoration: underline;
 }
 
+.mini-galeria {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.mini-galeria img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mini-galeria img:hover {
+  transform: scale(1.05);
+}
+
+.previa-site {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.8rem auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .card-servico:hover {
   box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
   transform: scale(1.02);
