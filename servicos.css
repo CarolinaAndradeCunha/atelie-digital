@@ -5,6 +5,7 @@
   --bege-claro: #f8f3f2;
   --preto: #3e2f2f;
   --verde-whatsapp: #25d366;
+  --dourado: #d9b464;
 }
 
 /* ===== RESET ===== */
@@ -68,6 +69,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  border: 2px solid var(--dourado);
 }
 
 .icone-circulo img {
@@ -236,24 +238,7 @@ h4 {
   max-width: 100%;
 }
 
-.card-modelo h3,
-.card-modelo h3 a {
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  color: var(--preto);
-  text-decoration: none;
-  line-height: 1.2;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.card-modelo h3 a:hover {
-  color: var(--rosa-escuro);
-  text-decoration: underline;
-}
-
-/* Mini Galeria */
+/* Mini Galeria (padrão antigo, ainda em uso em outros cards) */
 .mini-galeria {
   display: flex;
   gap: 0.4rem;
@@ -279,7 +264,56 @@ h4 {
   max-width: 100%;
 }
 
-/* Listas */
+/* Mini Galeria com título (nova versão) */
+.mini-galeria-com-titulo {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.5rem 0 1rem 0;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.item-galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.item-galeria img {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item-galeria img:hover {
+  transform: scale(1.05);
+}
+
+.titulo-site {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--rosa-escuro);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.item-galeria a:hover .titulo-site {
+  color: var(--preto);
+}
+
+/* Lista */
 .lista-word,
 .lista-excel {
   text-align: left;
@@ -412,12 +446,11 @@ h4 {
 
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 900px) {
-.grid-modelos {
-  padding-left: 1rem;
-  padding-right: 0.5rem;
-  scroll-padding-left: 1rem; /* garante que o 1º card apareça */
-}
-
+  .grid-modelos {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    scroll-padding-left: 1rem;
+  }
 
   .card-modelo {
     width: 160px;
