@@ -215,6 +215,29 @@ h4 {
   max-width: 100%;
 }
 
+.lista-links {
+  text-align: left;
+  list-style: disc inside;
+  font-size: 0.9rem;
+  color: var(--preto);
+  margin: 0.5rem 0 1rem;
+  padding-left: 0;
+}
+
+.lista-links li {
+  margin-bottom: 0.4rem;
+}
+
+.lista-links a {
+  color: var(--rosa-escuro);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.lista-links a:hover {
+  text-decoration: underline;
+}
+
 .card-servico:hover {
   box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
   transform: scale(1.02);
