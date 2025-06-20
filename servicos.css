@@ -183,25 +183,24 @@ h4 {
   overflow-wrap: break-word;
 }
 
-.grid-modelos {
+.secao-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0 0.5rem;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
 }
 
-.card-modelo {
+.card-servico {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 6px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 0.08);
-  width: 200px;
+  width: 300px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -210,92 +209,18 @@ h4 {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: default;
   text-align: center;
-  min-height: 260px;
-  box-sizing: border-box;
+  min-height: 220px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   max-width: 100%;
 }
 
-.card-modelo:hover {
+.card-servico:hover {
   box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
-  transform: translateY(-4px);
+  transform: scale(1.02);
 }
 
-.previa-site {
-  width: 100%;
-  height: auto;
-  max-height: 90px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 0.6rem;
-  max-width: 100%;
-}
-
-.card-modelo h3,
-.card-modelo h3 a {
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  color: var(--preto);
-  text-decoration: none;
-  line-height: 1.2;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.card-modelo h3 a:hover {
-  color: var(--rosa-escuro);
-  text-decoration: underline;
-}
-
-.mini-galeria {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin: 0.5rem 0;
-  justify-content: center;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 0.3rem;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  align-items: center;
-}
-
-.link-site-previa {
-  font-size: 0.8rem;
-  text-align: center;
-  color: var(--rosa-escuro);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.link-site-previa:hover {
-  text-decoration: underline;
-}
-
-.lista-word,
-.lista-excel {
-  text-align: left;
-  list-style: disc inside;
-  color: #444;
-  font-size: 0.9rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.8rem;
-  padding-left: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.lista-word li,
-.lista-excel li {
-  margin-bottom: 0.3rem;
-  line-height: 1.3;
-}
-
-.botao-consultar {
+.btn-whatsapp {
   margin-top: auto;
   background-color: var(--verde-whatsapp);
   color: white;
@@ -311,42 +236,25 @@ h4 {
   user-select: none;
 }
 
-.botao-consultar:hover {
+.btn-whatsapp:hover {
   background-color: #1ebe57;
 }
 
-.modal-img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+.lista-word {
+  text-align: left;
+  list-style: disc inside;
+  color: #444;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+  padding-left: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-.modal-img img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.fechar-modal {
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  font-size: 3rem;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-}
-
-.escondido {
-  display: none !important;
+.lista-word li {
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
 }
 
 .rodape {
@@ -403,16 +311,8 @@ h4 {
 }
 
 @media (max-width: 900px) {
-  .grid-modelos {
-    padding-left: 1rem;
-    padding-right: 0.5rem;
-    scroll-padding-left: 1rem;
-  }
-  .card-modelo {
-    width: 160px;
-    padding: 0.8rem;
-    min-height: 240px;
-    max-width: 100%;
+  .card-servico {
+    width: 260px;
   }
 }
 
@@ -451,23 +351,7 @@ h4 {
     width: 100%;
     text-align: left;
   }
-  .grid-modelos {
-    justify-content: center;
-  }
-  .card-modelo {
-    width: 140px;
-    padding: 0.7rem;
-    min-height: 200px;
-    max-width: 100%;
-  }
-  .mini-galeria img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 600px) {
-  .card-projeto {
-    max-width: 100%;
-  }
-}
+  .card-servico {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto
