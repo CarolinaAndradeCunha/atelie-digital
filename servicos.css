@@ -310,63 +310,38 @@ h4 {
   line-height: 1.3;
 }
 
-/* Modal */
-.modal {
-  position: fixed;
+#modal-img {
+  position: fixed; /* importante para o modal */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 2000;
-  padding: 1rem;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.modal-conteudo {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow: hidden;
+#modal-img img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
 }
 
-.modal-conteudo img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Botão Fechar */
 .fechar-modal {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: var(--rosa-escuro);
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
   color: white;
-  border: none;
-  font-size: 1.8rem;
-  font-weight: bold;
   cursor: pointer;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
-  z-index: 10;
-}
-
-.fechar-modal:hover {
-  background-color: #c33;
+  z-index: 1001;
 }
 
 .escondido {
-  display: none !important;
+  display: none;
 }
 
 .rodape {
