@@ -36,7 +36,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   flex-wrap: wrap;
 }
@@ -89,7 +89,8 @@ main {
   text-align: center;
 }
 
-main h1, main h2 {
+main h1,
+main h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: var(--rosa-escuro);
@@ -108,7 +109,7 @@ main h1, main h2 {
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #mensagem-escondida {
