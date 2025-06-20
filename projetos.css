@@ -190,8 +190,15 @@ a {
 @media (max-width: 768px) {
   .btn-menu {
     display: block;
+    position: absolute;
+    top: 12px; /* ajusta a distância do topo da barra */
+    right: 20px; /* distância da direita */
   }
 
+   .topo {
+    position: relative;
+  }
+  
   .menu ul {
     display: none;
     flex-direction: column;
