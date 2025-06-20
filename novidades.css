@@ -51,6 +51,7 @@ body {
 
 .icone-circulo {
   background-color: var(--rosa-escuro);
+  border: 2px solid var(--rosa-claro);
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -67,7 +68,18 @@ body {
   object-fit: cover;
 }
 
-/* ===== MENU DESKTOP ===== */
+/* ===== BOTÃO MENU (Hambúrguer) ===== */
+.btn-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ===== MENU ===== */
 .menu {
   display: flex;
   align-items: center;
@@ -86,37 +98,7 @@ body {
   color: var(--preto);
 }
 
-/* ===== BOTÃO HAMBURGUER ===== */
-.btn-menu {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* ===== MENU MOBILE ===== */
-.menu-mobile {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  background-color: var(--rosa-claro);
-  position: absolute;
-  top: 70px;
-  left: 0;
-  z-index: 999;
-  padding: 10px 20px;
-}
-
-.menu-mobile a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* ===== CONTEÚDO NOVO ===== */
+/* ===== CONTEÚDO PRINCIPAL ===== */
 main {
   max-width: 800px;
   margin: 100px auto 50px;
@@ -286,16 +268,33 @@ main h2 {
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-
+@media (max-width: 700px) {
   .btn-menu {
     display: block;
   }
 
-  .menu-mobile {
+  .menu {
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: var(--rosa-claro);
+    width: 220px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    z-index: 1000;
+  }
+
+  .menu.ativo {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .menu a {
+    padding: 12px 0;
   }
 }
