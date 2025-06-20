@@ -68,9 +68,15 @@ body {
   object-fit: cover;
 }
 
+/* ===== MENU DESKTOP ===== */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .menu a {
   color: white;
-  margin-left: 1rem;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
@@ -79,6 +85,43 @@ body {
 .menu a:hover,
 .menu a.ativo {
   color: var(--preto);
+}
+
+/* ===== BOTÃO HAMBURGUER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  gap: 5px;
+}
+
+.hamburger span {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+/* ===== MENU MOBILE ===== */
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--rosa-claro);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  padding: 10px 20px;
+}
+
+.menu-mobile a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* ===== CONTEÚDO NOVO ===== */
@@ -251,25 +294,16 @@ main h2 {
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width: 600px) {
-  main {
-    padding: 1rem;
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
   }
 
   .menu {
-    justify-content: center;
-    flex-wrap: wrap;
+    display: none;
   }
 
-  .menu a {
-    margin: 0.5rem;
-  }
-
-  .votacao {
-    align-items: stretch;
-  }
-
-  .sugestao-container form {
-    gap: 0.8rem;
+  .menu-mobile {
+    display: flex;
   }
 }
