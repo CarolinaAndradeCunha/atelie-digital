@@ -1,22 +1,6 @@
-// === MENU MOBILE (hambúrguer) ===
-  const btnMenu = document.querySelector('.btn-menu');
-  const menuUl = document.querySelector('.menu ul');
-
-  if (btnMenu && menuUl) {
-    const links = menuUl.querySelectorAll('a');
-
-    btnMenu.addEventListener('click', () => {
-      const isActive = menuUl.classList.toggle('ativo');
-      btnMenu.setAttribute('aria-expanded', isActive);
-    });
-
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        menuUl.classList.remove('ativo');
-        btnMenu.setAttribute('aria-expanded', false);
-      });
-    });
-  }
+  function toggleMenu() {
+    const menu = document.getElementById("menuMobile");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 
 document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('neblina-canvas');
