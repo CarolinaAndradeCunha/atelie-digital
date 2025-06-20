@@ -1,4 +1,3 @@
-/* ===== VARIÁVEIS ===== */
 :root {
   --rosa-claro: #ff8080;
   --rosa-escuro: #ff4d4d;
@@ -7,24 +6,25 @@
   --verde-whatsapp: #25d366;
 }
 
-/* ===== RESET E BASE ===== */
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
 body {
-  width: 100%;
-  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   background-color: var(--bege-claro);
   color: var(--preto);
   padding-top: 70px;
 }
 
-/* ===== HEADER ===== */
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
 .topo {
   position: fixed;
   top: 0;
@@ -44,12 +44,10 @@ body {
   font-weight: bold;
   font-size: 1.2rem;
   color: white;
-  text-decoration: none;
 }
 
 .icone-circulo {
   background-color: var(--rosa-escuro);
-  border: 2px solid var(--dourado-claro);
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -66,10 +64,7 @@ body {
   object-fit: cover;
 }
 
-.menu {
-  display: flex;
-}
-
+/* Menu */
 .menu ul {
   list-style: none;
   display: flex;
@@ -78,7 +73,6 @@ body {
 
 .menu a {
   color: white;
-  text-decoration: none;
   font-weight: 500;
 }
 
@@ -96,7 +90,7 @@ body {
   cursor: pointer;
 }
 
-/* ===== PROJETOS REAIS ===== */
+/* PROJETOS */
 .projetos-reais {
   max-width: 900px;
   margin: 2rem auto;
@@ -111,7 +105,6 @@ body {
   padding: 1.5rem;
   margin-top: 1.5rem;
   text-align: left;
-  position: relative;
 }
 
 .previa-site {
@@ -126,7 +119,6 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--preto);
-  text-decoration: none;
 }
 
 .card-projeto h3 a:hover {
@@ -143,7 +135,6 @@ body {
   background-color: var(--verde-whatsapp);
   color: white;
   padding: 0.6rem 1.2rem;
-  text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
   display: inline-block;
@@ -174,7 +165,7 @@ body {
   display: block;
 }
 
-/* ===== RODAPÉ ===== */
+/* RODAPÉ */
 .rodape {
   margin-top: 3rem;
   font-size: 0.9rem;
@@ -187,14 +178,13 @@ body {
 
 .rodape a {
   color: #666;
-  text-decoration: none;
 }
 
 .rodape a:hover {
   color: var(--rosa-escuro);
 }
 
-/* ===== RESPONSIVO ===== */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .menu {
     display: none;
@@ -206,7 +196,6 @@ body {
     width: 200px;
     border-radius: 0 0 8px 8px;
     box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
   }
 
   .menu.ativo {
@@ -215,18 +204,11 @@ body {
 
   .menu ul {
     flex-direction: column;
-    gap: 0;
-    padding: 0;
-    margin: 0;
   }
 
   .menu ul li {
     padding: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .menu ul li:last-child {
-    border-bottom: none;
   }
 
   .btn-menu {
