@@ -14,21 +14,35 @@
 
   <!-- Header -->
   <header class="topo">
-    <div class="marca">
-      <div class="icone-circulo">
-        <img src="images/symbol.png" alt="Logo" />
-      </div>
-      <span>Ateliê Digital</span>
+  <div class="marca">
+    <div class="icone-circulo">
+      <img src="images/symbol.png" alt="Logo" />
     </div>
-    <nav class="menu">
-      <button class="btn-menu" aria-label="Abrir menu">&#9776;</button>
-      <a href="index.html">Início</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="novidades.html" class="ativo">Novidades</a>
-      <a href="projetos.html">Projetos</a>
-              <a href="perguntas.html">Perguntas</a>
-    </nav>
-  </header>
+    <span>Ateliê Digital</span>
+  </div>
+
+  <!-- Botão hamburguer (fora do menu principal) -->
+  <button class="btn-menu" aria-label="Abrir menu" onclick="toggleMenu()">&#9776;</button>
+
+  <!-- Menu principal (desktop) -->
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="novidades.html" class="ativo">Novidades</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="perguntas.html">Perguntas</a>
+  </nav>
+
+  <!-- Menu mobile (aparece ao clicar no botão) -->
+  <nav class="menu-mobile" id="menuMobile">
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="novidades.html" class="ativo">Novidades</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="perguntas.html">Perguntas</a>
+  </nav>
+</header>
+
 
   <!-- Main -->
   <main>
