@@ -7,20 +7,18 @@ document.querySelectorAll('.faq-question').forEach(question => {
 
 // === MENU MOBILE (hambúrguer) ===
   const btnMenu = document.querySelector('.btn-menu');
-  const menuUl = document.querySelector('.menu ul');
+const menuList = document.querySelector('.menu ul');
 
-  if (btnMenu && menuUl) {
-    const links = menuUl.querySelectorAll('a');
+if (btnMenu && menuList) {
+  btnMenu.addEventListener('click', () => {
+    const ativo = menuList.classList.toggle('ativo');
+    btnMenu.setAttribute('aria-expanded', ativo);
+  });
 
-    btnMenu.addEventListener('click', () => {
-      const isActive = menuUl.classList.toggle('ativo');
-      btnMenu.setAttribute('aria-expanded', isActive);
+  menuList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuList.classList.remove('ativo');
+      btnMenu.setAttribute('aria-expanded', false);
     });
-
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        menuUl.classList.remove('ativo');
-        btnMenu.setAttribute('aria-expanded', false);
-      });
-    });
-  }
+  });
+}
