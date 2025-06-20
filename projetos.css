@@ -186,7 +186,19 @@ a {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-  .menu {
+  .container-menu {
+    position: relative;
+  }
+
+  .btn-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+  }
+
+  .menu ul {
     display: none;
     flex-direction: column;
     background-color: var(--rosa-claro);
@@ -196,20 +208,18 @@ a {
     width: 200px;
     border-radius: 0 0 8px 8px;
     box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
 
-  .menu.ativo {
+  .menu ul.ativo {
     display: flex;
-  }
-
-  .menu ul {
-    flex-direction: column;
   }
 
   .menu ul li {
     padding: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
+}
 
   .btn-menu {
     display: block;
