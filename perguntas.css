@@ -69,18 +69,16 @@ body {
   object-fit: cover;
 }
 
-.menu {
+/* Menu */
+.menu ul {
+  list-style: none;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .menu a {
   color: white;
-  margin-left: 1rem;
-  text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 .menu a:hover,
@@ -88,52 +86,56 @@ body {
   color: var(--preto);
 }
 
-/* ===== BOTÃO MENU HAMBÚRGUER ===== */
-.menu-toggle {
+/* Botão menu hamburguer */
+.btn-menu {
   display: none;
+  font-size: 1.8rem;
   background: none;
   border: none;
-  font-size: 1.8rem;
   color: white;
   cursor: pointer;
+  z-index: 1001;
 }
 
 /* ===== RESPONSIVO HEADER ===== */
 @media (max-width: 768px) {
-  .menu-toggle {
+  .btn-menu {
     display: block;
     position: absolute;
-    top: 16px;
-    right: 20px;
-    z-index: 1100;
+    top: 12px; /* ajusta a distância do topo da barra */
+    right: 20px; /* distância da direita */
   }
 
-  .topo {
-    flex-direction: column;
-    align-items: stretch;
+   .topo {
     position: relative;
-    padding: 10px 20px;
   }
-
-  .menu {
+  
+  .menu ul {
     display: none;
     flex-direction: column;
-    width: 100%;
     background-color: var(--rosa-claro);
-    margin-top: 10px;
-    padding: 0.5rem 0;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
     border-radius: 0 0 8px 8px;
-    animation: slideDown 0.3s ease forwards;
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
 
-  .menu.ativo {
+  .menu ul.ativo {
     display: flex;
   }
 
-  .menu a {
-    margin: 0.5rem 1rem;
+  .menu ul li {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
+  .menu {
+    position: relative;
+  }
+  
   @keyframes slideDown {
     from {
       opacity: 0;
