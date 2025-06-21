@@ -18,6 +18,12 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--rosa-claro);
   color: #0b0b0b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
 /* Bloco central */
