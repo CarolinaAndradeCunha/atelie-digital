@@ -79,11 +79,13 @@ body {
 .menu a {
   color: white;
   font-weight: 500;
+   text-decoration: none;
 }
 
 .menu a:hover,
 .menu a.ativo {
   color: var(--preto);
+   text-decoration: none;
 }
 
 /* Botão menu hamburguer */
