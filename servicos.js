@@ -32,3 +32,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("imagem-ampliada");
+const imagens = document.querySelectorAll(".imagem-espaco"); // classe que você usou nas imagens
+const fechar = document.querySelector(".fechar");
+
+imagens.forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+  });
+});
+
+modalImg.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+fechar.onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
