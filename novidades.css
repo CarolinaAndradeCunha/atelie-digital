@@ -48,7 +48,7 @@ body {
 
 .icone-circulo {
   background-color: var(--rosa-escuro);
-  border: 2px solid var(--rosa-claro);
+  border: 2px solid var(--bege-claro);
   border-radius: 50%;
   width: 32px;
   height: 32px;
