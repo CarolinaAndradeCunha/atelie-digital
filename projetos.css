@@ -4,6 +4,7 @@
   --bege-claro: #f8f3f2;
   --preto: #3e2f2f;
   --verde-whatsapp: #25d366;
+    --dourado-claro: #d4af37;
 }
 
 /* Reset e base */
@@ -48,6 +49,7 @@ a {
 
 .icone-circulo {
   background-color: var(--rosa-escuro);
+  border: 2px solid var(--dourado-claro);
   border-radius: 50%;
   width: 32px;
   height: 32px;
