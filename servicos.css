@@ -238,6 +238,7 @@ h4 {
   text-decoration: underline;
 }
 
+/* ===== Ajustes específicos para Chatbots ===== */
 .subtitulo-modelos.chatbots {
   color: var(--rosa-escuro);
   font-weight: 700;
@@ -249,22 +250,32 @@ h4 {
   padding-bottom: 0.25rem;
 }
 
-/* Ajustar container dos cards chatbots para alinhar melhor */
+/* Container cards Chatbot */
 .secao-cards.chatbots {
   justify-content: flex-start;
   gap: 1.5rem;
   padding: 0 1rem;
 }
 
-/* Card chatbot com padding e altura para uniformizar */
+/* Card chatbot - agora seguindo padrão do card-servico, mas com leve destaque */
 .card-servico.chatbot {
-  width: 320px;
-  min-height: 240px;
-  padding: 1.5rem 1.2rem;
-  background-color: #fff6f6; /* um leve tom rosado para destacar */
-  border: 1.5px solid var(--rosa-escuro);
-  box-shadow: 0 4px 12px rgb(255 77 77 / 0.15);
+  width: 300px;
+  min-height: 220px;
+  padding: 1rem;
+  background-color: white; /* volta ao padrão para uniformizar */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.08);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-servico.chatbot:hover {
+  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
+  transform: scale(1.02);
 }
 
 .card-servico.chatbot h4 {
@@ -279,11 +290,161 @@ h4 {
   margin-bottom: 1rem;
 }
 
-/* Botão whatsapp no chatbot, mantendo padrão */
+/* Botão whatsapp no chatbot - segue padrão */
 .card-servico.chatbot .btn-whatsapp {
   margin-top: auto;
 }
 
+/* ===== Ajustes específicos para Excel ===== */
+.subtitulo-modelos.excel {
+  color: var(--rosa-escuro);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--rosa-escuro);
+  padding-bottom: 0.25rem;
+  text-align: center;
+}
+
+/* Container cards Excel para alinhamento */
+.secao-cards.excel {
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Card Excel padrão */
+.card-servico.excel {
+  width: 300px;
+  min-height: 220px;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.card-servico.excel:hover {
+  box-shadow: 0 6px 15px rgb(37 211 102 / 0.3);
+  transform: scale(1.02);
+}
+
+/* Lista Excel (lista-excel) */
+.lista-excel {
+  font-size: 0.9rem;
+  color: var(--preto);
+  margin: 1rem 0 1.2rem 0;
+  padding-left: 1.3rem;
+  line-height: 1.5;
+  max-height: 140px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border-top: 1px solid var(--verde-whatsapp);
+  border-bottom: 1px solid var(--verde-whatsapp);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 6px;
+  background-color: #e8f6e9;
+}
+
+/* Botão Consultar Valores no Excel */
+.botao-consultar {
+  background-color: var(--verde-whatsapp);
+  color: white;
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  user-select: none;
+}
+
+.botao-consultar:hover {
+  background-color: #1ebe57;
+}
+
+/* Scroll estilizado para lista Excel */
+.lista-excel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lista-excel::-webkit-scrollbar-track {
+  background: #e8f6e9;
+  border-radius: 6px;
+}
+
+.lista-excel::-webkit-scrollbar-thumb {
+  background-color: var(--verde-whatsapp);
+  border-radius: 6px;
+}
+
+/* ===== Geral dos cards ===== */
+.card-servico:hover {
+  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
+  transform: scale(1.02);
+}
+
+.btn-whatsapp {
+  margin-top: auto;
+  background-color: var(--verde-whatsapp);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+/* Pequenas correções gerais */
+.card-servico > ul {
+  padding-left: 1.3rem;
+}
+
+ul.lista-links,
+ul.lista-word,
+ul.lista-excel {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.lista-word {
+  text-align: left;
+  list-style: disc inside;
+  color: #444;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+  padding-left: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.lista-word li {
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+/* ===== Outros estilos do site ===== */
 .mini-galeria {
   display: flex;
   justify-content: center;
@@ -346,6 +507,7 @@ h4 {
 .fechar:focus {
   color: #bbb;
 }
+
 .previa-site {
   display: block;
   max-width: 100%;
@@ -355,149 +517,7 @@ h4 {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.card-servico:hover {
-  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
-  transform: scale(1.02);
-}
-
-.btn-whatsapp {
-  margin-top: auto;
-  background-color: var(--verde-whatsapp);
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  user-select: none;
-}
-
-.btn-whatsapp:hover {
-  background-color: #1ebe57;
-}
-
-.lista-word {
-  text-align: left;
-  list-style: disc inside;
-  color: #444;
-  font-size: 0.9rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.8rem;
-  padding-left: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.lista-word li {
-  margin-bottom: 0.3rem;
-  line-height: 1.3;
-}
-
-.subtitulo-modelos.excel {
-  color: var(--rosa-escuro);
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  border-bottom: 3px solid var(--rosa-escuro);
-  padding-bottom: 0.25rem;
-  text-align: center;
-}
-
-/* Container cards Excel para alinhamento */
-.secao-cards.excel {
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 0 1rem;
-}
-
-/* Card Excel maior e com destaque */
-.card-servico.excel {
-  width: 320px;
-  min-height: 280px;
-  padding: 1.5rem 1.2rem;
-  background-color: #f0fff4; /* leve verde clarinho */
-  border: 1.5px solid var(--verde-whatsapp);
-  box-shadow: 0 4px 12px rgb(37 211 102 / 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-}
-
-/* Lista Excel */
-.lista-excel {
-  font-size: 0.9rem;
-  color: #2d4f2d;
-  margin: 1rem 0 1.2rem 0;
-  padding-left: 1.3rem;
-  line-height: 1.5;
-  max-height: 140px;
-  overflow-y: auto;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  border-top: 1px solid var(--verde-whatsapp);
-  border-bottom: 1px solid var(--verde-whatsapp);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-radius: 6px;
-  background-color: #e8f6e9;
-}
-
-/* Botão Consultar Valores no Excel */
-.botao-consultar {
-  background-color: var(--verde-whatsapp);
-  color: white;
-  padding: 0.55rem 1.2rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  align-self: center;
-  user-select: none;
-}
-
-.botao-consultar:hover {
-  background-color: #1ebe57;
-}
-
-/* Scroll estilizado para lista Excel */
-.lista-excel::-webkit-scrollbar {
-  width: 6px;
-}
-
-.lista-excel::-webkit-scrollbar-track {
-  background: #e8f6e9;
-  border-radius: 6px;
-}
-
-.lista-excel::-webkit-scrollbar-thumb {
-  background-color: var(--verde-whatsapp);
-  border-radius: 6px;
-}
-
-/* ===== Pequenas correções gerais ===== */
-
-/* Espaço interno nos cards */
-.card-servico > ul {
-  padding-left: 1.3rem;
-}
-
-/* Corrigir overflow e quebras em listas */
-ul.lista-links,
-ul.lista-word,
-ul.lista-excel {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
+/* ===== RODAPÉ ===== */
 .rodape {
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -531,6 +551,7 @@ ul.lista-excel {
   color: var(--rosa-escuro);
 }
 
+/* Botão voltar topo */
 #btn-topo {
   position: fixed;
   bottom: 30px;
@@ -551,9 +572,14 @@ ul.lista-excel {
   background-color: #e04343;
 }
 
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 900px) {
   .card-servico {
     width: 260px;
+  }
+  .card-servico.chatbot,
+  .card-servico.excel {
+    width: 280px;
   }
 }
 
@@ -595,12 +621,7 @@ ul.lista-excel {
   .card-servico {
     width: 90%;
     max-width: 320px;
-    margin: 0 auto
-
-  @media (max-width: 900px) {
-  .card-servico.chatbot,
-  .card-servico.excel {
-    width: 280px;
+    margin: 0 auto;
   }
 }
 
