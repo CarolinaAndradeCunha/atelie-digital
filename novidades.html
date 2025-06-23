@@ -51,14 +51,19 @@
       <p id="resposta-voto"></p>
     </section>
 
-    <section class="sugestao-container">
-      <h2>Deixe sua sugestão anônima</h2>
-      <form id="form-sugestao" action="https://formspree.io/f/seu-id-aqui" method="POST">
-        <label for="sugestao">O que mais você gostaria de ver por aqui?</label>
-        <textarea id="sugestao" name="sugestao" rows="4" placeholder="Digite sua sugestão aqui..." required></textarea>
-        <button type="submit" class="btn-enviar">Enviar sugestão</button>
-      </form>
-    </section>
+<section class="sugestao-container">
+  <h2>Deixe sua sugestão anônima</h2>
+  <form id="form-sugestao" action="https://formspree.io/f/xyzjndzp" method="POST">
+    <label for="sugestao">O que mais você gostaria de ver por aqui?</label>
+    <textarea id="sugestao" name="sugestao" rows="4" placeholder="Digite sua sugestão aqui..." required></textarea>
+    
+    <!-- Anti-spam invisível -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit" class="btn-enviar">Enviar sugestão</button>
+  </form>
+</section>
+
   </main>
 
   <!-- Footer -->
