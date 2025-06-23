@@ -30,7 +30,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
 }
 
 /* ===== HEADER ===== */
@@ -97,13 +96,7 @@ body {
   display: flex;
   gap: 1rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
   transition: max-height 0.3s ease;
-}
-
-.menu ul li {
-  margin: 0;
 }
 
 .menu a {
@@ -120,12 +113,12 @@ body {
   color: var(--preto);
 }
 
+/* ===== CONTEÚDO PRINCIPAL ===== */
 main {
   max-width: 1100px;
   margin: 2rem auto;
   padding: 0 1rem;
   width: 100%;
-  max-width: 100vw;
   box-sizing: border-box;
 }
 
@@ -142,8 +135,6 @@ h2 {
   font-weight: 700;
   border-bottom: 2px solid var(--rosa-escuro);
   padding-bottom: 0.25rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 h3.subtitulo-modelos {
@@ -152,8 +143,6 @@ h3.subtitulo-modelos {
   margin-top: 2rem;
   margin-bottom: 0.4rem;
   font-weight: 600;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
   display: block;
   width: 100%;
 }
@@ -164,8 +153,6 @@ h4 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .observacao {
@@ -179,10 +166,9 @@ h4 {
   border-left: 4px solid var(--rosa-escuro);
   border-radius: 6px;
   line-height: 1.6;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
+/* ===== CARDS ===== */
 .secao-cards {
   display: flex;
   flex-wrap: wrap;
@@ -190,9 +176,6 @@ h4 {
   gap: 1rem;
   margin-bottom: 2rem;
   padding: 0 0.5rem;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
 }
 
 .card-servico {
@@ -207,25 +190,53 @@ h4 {
   align-items: center;
   padding: 1rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  cursor: default;
   text-align: center;
   min-height: 220px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-width: 100%;
 }
 
-.lista-links {
+.card-servico:hover {
+  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
+  transform: scale(1.02);
+}
+
+/* Botões */
+.btn-whatsapp,
+.botao-consultar {
+  margin-top: auto;
+  background-color: var(--verde-whatsapp);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.botao-consultar {
+  padding: 0.55rem 1.2rem;
+}
+
+.btn-whatsapp:hover,
+.botao-consultar:hover {
+  background-color: #1ebe57;
+}
+
+/* Listas */
+.lista-links,
+.lista-word,
+.lista-excel {
   text-align: left;
   list-style: disc inside;
   font-size: 0.9rem;
-  color: var(--preto);
+  color: #444;
   margin: 0.5rem 0 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   padding-left: 0;
-}
-
-.lista-links li {
-  margin-bottom: 0.4rem;
 }
 
 .lista-links a {
@@ -238,41 +249,49 @@ h4 {
   text-decoration: underline;
 }
 
-/* ===== Ajustes específicos para Chatbots ===== */
-.subtitulo-modelos.chatbots {
-  color: var(--rosa-escuro);
+.lista-links li,
+.lista-word li,
+.lista-excel li {
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+/* ===== SEÇÕES ESPECIAIS ===== */
+.subtitulo-modelos.chatbots,
+.subtitulo-modelos.excel {
+  font-size: 1.5rem;
   font-weight: 700;
+  color: var(--rosa-escuro);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
-  font-size: 1.5rem;
   padding-bottom: 0.25rem;
 }
 
-/* Container cards Chatbot */
-.secao-cards.chatbots {
+.secao-cards.chatbots,
+.secao-cards.excel {
   justify-content: center;
   gap: 1.5rem;
   padding: 0 1rem;
 }
 
-/* Card chatbot - agora seguindo padrão do card-servico, mas com leve destaque */
-.card-servico.chatbot {
+.card-servico.chatbot,
+.card-servico.excel {
   width: 300px;
   min-height: 220px;
   padding: 1rem;
-  background-color: white; /* volta ao padrão para uniformizar */
+  background-color: white;
   border: 1px solid #ddd;
   box-shadow: 0 2px 5px rgb(0 0 0 / 0.08);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  cursor: default;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card-servico.chatbot:hover {
+.card-servico.chatbot:hover,
+.card-servico.excel:hover {
   box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
   transform: scale(1.02);
 }
@@ -289,104 +308,7 @@ h4 {
   margin-bottom: 1rem;
 }
 
-/* Botão whatsapp no chatbot - segue padrão */
-.card-servico.chatbot .btn-whatsapp {
-  margin-top: auto;
-}
-
-/* Botão Consultar Valores no Excel */
-.botao-consultar {
-  background-color: var(--verde-whatsapp);
-  color: white;
-  padding: 0.55rem 1.2rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  align-self: center;
-  user-select: none;
-}
-
-.botao-consultar:hover {
-  background-color: #1ebe57;
-}
-
-/* ===== Geral dos cards ===== */
-.card-servico:hover {
-  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
-  transform: scale(1.02);
-}
-
-.btn-whatsapp {
-  margin-top: auto;
-  background-color: var(--verde-whatsapp);
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  user-select: none;
-}
-
-.btn-whatsapp:hover {
-  background-color: #1ebe57;
-}
-
-/* Pequenas correções gerais */
-.card-servico > ul {
-  padding-left: 1.3rem;
-}
-
-ul.lista-links,
-ul.lista-word,
-ul.lista-excel {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.lista-word {
-  text-align: left;
-  list-style: disc inside;
-  color: #444;
-  font-size: 0.9rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.8rem;
-  padding-left: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.lista-word li {
-  margin-bottom: 0.3rem;
-  line-height: 1.3;
-}
-
-.lista-excel {
-  text-align: left;
-  list-style: disc inside;
-  color: #444;
-  font-size: 0.9rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.8rem;
-  padding-left: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.lista-excel li {
-  margin-bottom: 0.3rem;
-  line-height: 1.3;
-}
-
-/* ===== Outros estilos do site ===== */
+/* ===== GALERIA DE IMAGENS ===== */
 .mini-galeria {
   display: flex;
   justify-content: center;
@@ -408,7 +330,7 @@ ul.lista-excel {
   transform: scale(1.05);
 }
 
-/* Modal */
+/* ===== MODAL ===== */
 .modal {
   display: none;
   position: fixed;
@@ -422,7 +344,6 @@ ul.lista-excel {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Imagem dentro do modal */
 .modal-conteudo {
   margin: auto;
   display: block;
@@ -432,7 +353,6 @@ ul.lista-excel {
   box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
-/* Botão fechar */
 .fechar {
   position: absolute;
   top: 30px;
@@ -450,6 +370,7 @@ ul.lista-excel {
   color: #bbb;
 }
 
+/* ===== PRÉVIA DE SITE ===== */
 .previa-site {
   display: block;
   max-width: 100%;
@@ -493,7 +414,7 @@ ul.lista-excel {
   color: var(--rosa-escuro);
 }
 
-/* Botão voltar topo */
+/* ===== BOTÃO TOPO ===== */
 #btn-topo {
   position: fixed;
   bottom: 30px;
@@ -519,6 +440,7 @@ ul.lista-excel {
   .card-servico {
     width: 260px;
   }
+
   .card-servico.chatbot,
   .card-servico.excel {
     width: 280px;
@@ -529,6 +451,7 @@ ul.lista-excel {
   .btn-menu {
     display: block;
   }
+
   .menu ul {
     flex-direction: column;
     position: fixed;
@@ -543,23 +466,28 @@ ul.lista-excel {
     border-bottom-left-radius: 10px;
     z-index: 1000;
   }
+
   .menu ul.ativo {
     max-height: 500px;
     overflow-y: auto;
   }
+
   .menu ul li {
     padding: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
+
   .menu ul li:last-child {
     border-bottom: none;
   }
+
   nav a {
     font-size: 1.1rem;
     display: block;
     width: 100%;
     text-align: left;
   }
+
   .card-servico {
     width: 90%;
     max-width: 320px;
