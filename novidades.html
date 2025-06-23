@@ -53,6 +53,12 @@
 
 <section class="sugestao-container">
   <h2>Deixe sua sugestão anônima</h2>
+  
+  <!-- Mensagem de sucesso (começa escondida) -->
+  <p id="mensagem-sucesso" style="display: none; color: green; font-weight: bold;">
+    Obrigada pela sua sugestão! 💌
+  </p>
+
   <form id="form-sugestao" action="https://formspree.io/f/xyzjndzp" method="POST">
     <label for="sugestao">O que mais você gostaria de ver por aqui?</label>
     <textarea id="sugestao" name="sugestao" rows="4" placeholder="Digite sua sugestão aqui..." required></textarea>
@@ -63,6 +69,7 @@
     <button type="submit" class="btn-enviar">Enviar sugestão</button>
   </form>
 </section>
+
 
   </main>
 
