@@ -238,6 +238,52 @@ h4 {
   text-decoration: underline;
 }
 
+.subtitulo-modelos.chatbots {
+  color: var(--rosa-escuro);
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 3px solid var(--rosa-escuro);
+  padding-bottom: 0.25rem;
+}
+
+/* Ajustar container dos cards chatbots para alinhar melhor */
+.secao-cards.chatbots {
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Card chatbot com padding e altura para uniformizar */
+.card-servico.chatbot {
+  width: 320px;
+  min-height: 240px;
+  padding: 1.5rem 1.2rem;
+  background-color: #fff6f6; /* um leve tom rosado para destacar */
+  border: 1.5px solid var(--rosa-escuro);
+  box-shadow: 0 4px 12px rgb(255 77 77 / 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-servico.chatbot h4 {
+  color: var(--rosa-escuro);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.card-servico.chatbot p {
+  font-size: 0.95rem;
+  color: var(--preto);
+  margin-bottom: 1rem;
+}
+
+/* Botão whatsapp no chatbot, mantendo padrão */
+.card-servico.chatbot .btn-whatsapp {
+  margin-top: auto;
+}
+
 .mini-galeria {
   display: flex;
   justify-content: center;
@@ -351,6 +397,107 @@ h4 {
   line-height: 1.3;
 }
 
+.subtitulo-modelos.excel {
+  color: var(--rosa-escuro);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--rosa-escuro);
+  padding-bottom: 0.25rem;
+  text-align: center;
+}
+
+/* Container cards Excel para alinhamento */
+.secao-cards.excel {
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Card Excel maior e com destaque */
+.card-servico.excel {
+  width: 320px;
+  min-height: 280px;
+  padding: 1.5rem 1.2rem;
+  background-color: #f0fff4; /* leve verde clarinho */
+  border: 1.5px solid var(--verde-whatsapp);
+  box-shadow: 0 4px 12px rgb(37 211 102 / 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* Lista Excel */
+.lista-excel {
+  font-size: 0.9rem;
+  color: #2d4f2d;
+  margin: 1rem 0 1.2rem 0;
+  padding-left: 1.3rem;
+  line-height: 1.5;
+  max-height: 140px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border-top: 1px solid var(--verde-whatsapp);
+  border-bottom: 1px solid var(--verde-whatsapp);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 6px;
+  background-color: #e8f6e9;
+}
+
+/* Botão Consultar Valores no Excel */
+.botao-consultar {
+  background-color: var(--verde-whatsapp);
+  color: white;
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  user-select: none;
+}
+
+.botao-consultar:hover {
+  background-color: #1ebe57;
+}
+
+/* Scroll estilizado para lista Excel */
+.lista-excel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lista-excel::-webkit-scrollbar-track {
+  background: #e8f6e9;
+  border-radius: 6px;
+}
+
+.lista-excel::-webkit-scrollbar-thumb {
+  background-color: var(--verde-whatsapp);
+  border-radius: 6px;
+}
+
+/* ===== Pequenas correções gerais ===== */
+
+/* Espaço interno nos cards */
+.card-servico > ul {
+  padding-left: 1.3rem;
+}
+
+/* Corrigir overflow e quebras em listas */
+ul.lista-links,
+ul.lista-word,
+ul.lista-excel {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .rodape {
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -449,3 +596,17 @@ h4 {
     width: 90%;
     max-width: 320px;
     margin: 0 auto
+
+  @media (max-width: 900px) {
+  .card-servico.chatbot,
+  .card-servico.excel {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-servico.chatbot,
+  .card-servico.excel {
+    width: 90%;
+  }
+}
