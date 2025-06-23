@@ -85,3 +85,31 @@ botoesVoto.forEach(botao => {
     resposta.textContent = `Obrigada! Você votou em: "${botao.textContent}"`;
   });
 });
+
+       const form = document.getElementById("form-sugestao");
+  const mensagemSucesso = document.getElementById("mensagem-sucesso");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // Impede o recarregamento da página
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        form.style.display = "none"; // Esconde o formulário
+        mensagemSucesso.style.display = "block"; // Mostra mensagem de sucesso
+      } else {
+        alert("Algo deu errado. Tente novamente mais tarde.");
+      }
+    } catch (error) {
+      alert("Erro de conexão. Verifique sua internet.");
+    }
+  });
