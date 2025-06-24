@@ -256,8 +256,6 @@ h4 {
   line-height: 1.3;
 }
 
-/* ===== SEÇÕES ESPECIAIS ===== */
-.subtitulo-modelos.chatbots,
 .subtitulo-modelos.excel {
   font-size: 1.5rem;
   font-weight: 700;
@@ -268,14 +266,12 @@ h4 {
   padding-bottom: 0.25rem;
 }
 
-.secao-cards.chatbots,
 .secao-cards.excel {
   justify-content: center;
   gap: 1.5rem;
   padding: 0 1rem;
 }
 
-.card-servico.chatbot,
 .card-servico.excel {
   width: 300px;
   min-height: 220px;
@@ -290,22 +286,9 @@ h4 {
   align-items: center;
 }
 
-.card-servico.chatbot:hover,
 .card-servico.excel:hover {
   box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
   transform: scale(1.02);
-}
-
-.card-servico.chatbot h4 {
-  color: var(--rosa-escuro);
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-
-.card-servico.chatbot p {
-  font-size: 0.95rem;
-  color: var(--preto);
-  margin-bottom: 1rem;
 }
 
 /* ===== GALERIA DE IMAGENS ===== */
@@ -440,11 +423,6 @@ h4 {
   .card-servico {
     width: 260px;
   }
-
-  .card-servico.chatbot,
-  .card-servico.excel {
-    width: 280px;
-  }
 }
 
 @media (max-width: 700px) {
@@ -496,7 +474,6 @@ h4 {
 }
 
 @media (max-width: 480px) {
-  .card-servico.chatbot,
   .card-servico.excel {
     width: 90%;
   }
