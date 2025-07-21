@@ -1,118 +1,480 @@
-/* RESET BÁSICO */
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+  --rosa-claro: #ff8080;
+  --rosa-escuro: #ff4d4d;
+  --bege-claro: #f8f3f2;
+  --preto: #3e2f2f;
+  --verde-whatsapp: #25d366;
+  --dourado-claro: #d4af37;
+}
+
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
-  color: #000;
-  scroll-behavior: smooth;
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-/* CONTAINER DOS CARDS */
-.cards-container {
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bege-claro);
+  color: var(--preto);
+  padding-top: 70px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== HEADER ===== */
+.topo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--rosa-claro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.icone-circulo {
+  background-color: var(--rosa-escuro);
+  border: 2px solid var(--dourado-claro);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.icone-circulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.btn-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1001;
+}
+
+.menu ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  transition: max-height 0.3s ease;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  color: var(--preto);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+main h2,
+main h3.subtitulo-modelos,
+main h4 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--rosa-escuro);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--rosa-escuro);
+  padding-bottom: 0.25rem;
+}
+
+h3.subtitulo-modelos {
+  font-size: 1.4rem;
+  color: var(--rosa-escuro);
+  margin-top: 2rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: var(--preto);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.observacao {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  background-color: #fff8f8;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--rosa-escuro);
+  border-radius: 6px;
+  line-height: 1.6;
+}
+
+/* ===== CARDS ===== */
+.secao-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
 }
 
-/* CARD INDIVIDUAL */
-.card {
-  background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 16px;
-  padding: 1.5rem;
+.card-servico {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.08);
   width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* HOVER - DESKTOP */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  }
-}
-
-/* TOQUE - MOBILE */
-@media (hover: none) {
-  .card:active {
-    transform: scale(1.05);
-  }
-}
-
-/* BOTÃO DENTRO DE CADA CARD – APARECE APENAS NO MOBILE */
-.card .consultar-btn {
-  display: none;
-  margin-top: 1rem;
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #25D366;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-/* BOTÃO ÚNICO – APARECE APENAS NO DESKTOP */
-.consultar-todos {
-  display: none;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   text-align: center;
-  margin-top: 2rem;
+  min-height: 220px;
 }
 
-.consultar-todos button {
-  background-color: #25D366;
+.card-servico:hover {
+  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
+  transform: scale(1.02);
+}
+
+/* Botões */
+.btn-whatsapp,
+.botao-consultar {
+  margin-top: auto;
+  background-color: var(--verde-whatsapp);
   color: white;
+  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: bold;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
 }
 
-/* HOVER BOTÕES */
-button:hover {
+.botao-consultar {
+  padding: 0.55rem 1.2rem;
+}
+
+.btn-whatsapp:hover,
+.botao-consultar:hover {
   background-color: #1ebe57;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Listas */
+.lista-links,
+.lista-word,
+.lista-excel {
+  text-align: left;
+  list-style: disc inside;
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0.5rem 0 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-left: 0;
+}
 
-  .card {
-    width: 90%;
-  }
+.lista-links a {
+  color: var(--rosa-escuro);
+  text-decoration: none;
+  font-weight: 500;
+}
 
-  .card .consultar-btn {
-    display: block;
-  }
+.lista-links a:hover {
+  text-decoration: underline;
+}
 
-  .consultar-todos {
-    display: none;
+.lista-links li,
+.lista-word li,
+.lista-excel li {
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.subtitulo-modelos.excel {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--rosa-escuro);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 0.25rem;
+}
+
+.secao-cards.excel {
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.card-servico.excel {
+  width: 300px;
+  min-height: 220px;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-servico.excel:hover {
+  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
+  transform: scale(1.02);
+}
+
+/* ===== GALERIA DE IMAGENS ===== */
+.mini-galeria {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.mini-galeria img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mini-galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-conteudo {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.fechar {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1001;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: #bbb;
+}
+
+/* ===== PRÉVIA DE SITE ===== */
+.previa-site {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.8rem auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  background-color: var(--bege-claro);
+}
+
+.rodape p {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rodape i {
+  font-size: 1rem;
+  color: #999;
+}
+
+.rodape a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.rodape a:hover {
+  color: var(--rosa-escuro);
+}
+
+/* ===== BOTÃO TOPO ===== */
+#btn-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 0.7rem 1rem;
+  font-size: 1.3rem;
+  background-color: var(--rosa-escuro);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgb(255 77 77 / 0.6);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+#btn-topo:hover {
+  background-color: #e04343;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 900px) {
+  .card-servico {
+    width: 260px;
   }
 }
 
-@media (min-width: 769px) {
-  .card .consultar-btn {
-    display: none;
+@media (max-width: 700px) {
+  .btn-menu {
+    display: block;
   }
 
-  .consultar-todos {
+  .menu ul {
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: var(--rosa-claro);
+    width: 220px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    z-index: 1000;
+  }
+
+  .menu ul.ativo {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .menu ul li {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  nav a {
+    font-size: 1.1rem;
     display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .card-servico {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-servico.excel {
+    width: 90%;
   }
 }
