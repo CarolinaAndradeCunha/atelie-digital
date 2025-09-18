@@ -4,7 +4,7 @@
   --bege-claro: #f8f3f2;
   --preto: #3e2f2f;
   --verde-whatsapp: #25d366;
-    --dourado-claro: #d4af37;
+  --dourado-claro: #d4af37;
 }
 
 /* Reset e base */
@@ -99,7 +99,11 @@ a {
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
+}
+
+.projetos-reais h2 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .card-projeto {
@@ -107,8 +111,11 @@ a {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  margin-top: 1.5rem;
   text-align: left;
+}
+
+.card-projeto + .card-projeto {
+  margin-top: 2rem;
 }
 
 .previa-site {
@@ -157,7 +164,8 @@ a {
   font-size: 0.85rem;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 0.5rem;
+  display: block;
+  margin: 1rem 0;
 }
 
 .texto-completo {
@@ -180,6 +188,14 @@ a {
   background-color: var(--bege-claro);
 }
 
+.rodape p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .rodape a {
   color: #666;
 }
@@ -193,14 +209,14 @@ a {
   .btn-menu {
     display: block;
     position: absolute;
-    top: 12px; /* ajusta a distância do topo da barra */
-    right: 20px; /* distância da direita */
+    top: 12px;
+    right: 20px;
   }
 
-   .topo {
+  .topo {
     position: relative;
   }
-  
+
   .menu ul {
     display: none;
     flex-direction: column;
@@ -226,7 +242,7 @@ a {
   .menu {
     position: relative;
   }
-  
+
   .rodape {
     font-size: 0.8rem;
     padding: 1rem 1rem;
@@ -235,6 +251,6 @@ a {
 
   .rodape a {
     margin: 0 0.2rem;
-    display: inline-block; /* para facilitar toque */
+    display: inline-block;
   }
 }
