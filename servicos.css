@@ -80,20 +80,40 @@ object-fit:cover;
 
 
 /* =========================================
-MENU
+MENU (EXATAMENTE COMO PEDIU)
 ========================================= */
+
+.menu{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.btn-menu{
+display:none;
+background:none;
+border:none;
+font-size:1.8rem;
+color:white;
+cursor:pointer;
+margin-left:auto;
+z-index:1001;
+}
 
 .menu ul{
 display:flex;
 gap:1rem;
 list-style:none;
+transition:max-height .3s ease;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
 font-weight:500;
-transition:.3s;
+transition:color .3s;
+word-wrap:break-word;
+overflow-wrap:break-word;
 }
 
 .menu a:hover,
@@ -147,19 +167,19 @@ gap:1.5rem;
 
 .card-servico{
 background:white;
-border-radius:14px;
-box-shadow:0 4px 15px rgba(0,0,0,0.06);
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.07);
 width:300px;
-padding:1.4rem;
+padding:1.5rem;
 display:flex;
 flex-direction:column;
-gap:.6rem;
-transition:.25s;
+gap:.7rem;
+transition:.3s ease;
 }
 
 .card-servico:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 25px rgba(255,77,77,0.18);
+transform:translateY(-8px);
+box-shadow:0 14px 30px rgba(255,77,77,0.22);
 }
 
 .card-servico h4{
@@ -170,7 +190,7 @@ font-size:1.2rem;
 .card-servico p{
 font-size:.9rem;
 color:#555;
-line-height:1.4;
+line-height:1.5;
 }
 
 
@@ -187,7 +207,7 @@ margin-bottom:1rem;
 
 .lista-site li,
 .lista-word li{
-margin-bottom:.35rem;
+margin-bottom:.4rem;
 }
 
 .titulo-lista{
@@ -196,8 +216,8 @@ margin-top:.4rem;
 }
 
 .sub-lista{
-margin:.3rem 0 .6rem 1rem;
-padding-left:.6rem;
+margin:.4rem 0 .7rem 1rem;
+padding-left:.8rem;
 border-left:3px solid var(--rosa-claro);
 }
 
@@ -210,8 +230,8 @@ BOTÃO WHATSAPP
 margin-top:auto;
 background:var(--verde-whatsapp);
 color:white;
-padding:.55rem 1rem;
-border-radius:8px;
+padding:.6rem 1.1rem;
+border-radius:10px;
 text-decoration:none;
 font-size:.9rem;
 font-weight:600;
@@ -272,19 +292,26 @@ RESPONSIVO
 
 @media(max-width:700px){
 
+.btn-menu{
+display:block;
+}
+
 .menu ul{
-display:none;
 flex-direction:column;
 position:fixed;
 top:60px;
 right:0;
 background:var(--rosa-claro);
 width:220px;
-padding:1rem;
+max-height:0;
+overflow:hidden;
+padding:0 1rem;
+transition:max-height .3s ease;
 }
 
 .menu ul.ativo{
-display:flex;
+max-height:500px;
+padding:1rem;
 }
 
 .card-servico{
