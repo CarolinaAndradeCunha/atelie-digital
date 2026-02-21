@@ -169,119 +169,61 @@ h4 {
 }
 
 /* ===== CARDS ===== */
-.secao-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  padding: 0 0.5rem;
-}
-
 .card-servico {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 0.08);
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
   width: 300px;
-  flex-shrink: 0;
+  padding: 1.4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  text-align: center;
-  min-height: 220px;
+  gap: 0.6rem;
+  transition: 0.25s ease;
+  text-align: left;
 }
 
 .card-servico:hover {
-  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
-  transform: scale(1.02);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(255,77,77,0.18);
 }
 
-/* Botões */
-.btn-whatsapp,
-.botao-consultar {
-  margin-top: auto;
-  background-color: var(--verde-whatsapp);
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  user-select: none;
-}
-
-.botao-consultar {
-  padding: 0.55rem 1.2rem;
-}
-
-.btn-whatsapp:hover,
-.botao-consultar:hover {
-  background-color: #1ebe57;
-}
-
-/* Listas */
-.lista-site,
-.lista-word,
-.lista-excel {
-  text-align: left;
-  list-style: disc inside;
-  font-size: 0.9rem;
-  color: #444;
-  margin: 0.5rem 0 1rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  padding-left: 0;
-}
-
-.lista-word li,
-.lista-excel li {
-  margin-bottom: 0.3rem;
-  line-height: 1.3;
-}
-
-.valor {
-  font-style: italic;
-}
-
-.subtitulo-modelos.excel {
-  font-size: 1.5rem;
-  font-weight: 700;
+/* título */
+.card-servico h4 {
   color: var(--rosa-escuro);
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  padding-bottom: 0.25rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
 }
 
-.secao-cards.excel {
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 0 1rem;
+/* descrição */
+.card-servico p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
 }
 
-.card-servico.excel {
-  width: 300px;
-  min-height: 220px;
-  padding: 1rem;
-  background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 0.08);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* ===== LISTAS ===== */
+
+.lista-site,
+.lista-word {
+  padding-left: 1rem;
+  margin: 0.4rem 0 1rem;
+  font-size: 0.9rem;
 }
 
-.card-servico.excel:hover {
-  box-shadow: 0 6px 15px rgb(255 77 77 / 0.3);
-  transform: scale(1.02);
+.lista-site li,
+.lista-word li {
+  margin-bottom: 0.35rem;
+}
+
+/* sublista (planos) */
+.sub-lista {
+  margin: 0.3rem 0 0.6rem 1rem;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--rosa-claro);
+}
+
+.sub-lista li {
+  margin-bottom: 0.25rem;
 }
 
 /* ===== PRÉVIA DE SITE ===== */
