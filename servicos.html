@@ -12,8 +12,35 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body> <header class="topo"> <a href="index.html" class="marca"> <div class="icone-circulo"> <img src="images/symbol.png" alt="Logo"> </div> Ateliê Digital </a> <nav class="menu"> <button class="btn-menu" aria-label="Abrir menu">&#9776;</button> <ul> <li><a href="index.html">Início</a></li> <li><a href="servicos.html" class="ativo">Serviços</a></li> <li><a href="novidades.html">Novidades</a></li> <li><a href="projetos.html">Projetos</a></li> <li><a href="perguntas.html">Perguntas</a></li> </ul> </nav> </header>
-<!-- ===== CONTEÚDO ===== -->
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topo">
+
+  <a href="index.html" class="marca">
+    <div class="icone-circulo">
+      <img src="images/symbol.png" alt="Logo Ateliê Digital">
+    </div>
+    Ateliê Digital
+  </a>
+
+  <!-- MENU EXATAMENTE COMO VOCÊ PEDIU -->
+  <nav class="menu">
+    <button class="btn-menu" aria-label="Abrir menu">&#9776;</button>
+
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="servicos.html" class="ativo">Serviços</a></li>
+      <li><a href="novidades.html">Novidades</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="perguntas.html">Perguntas</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+
+<!-- ================= CONTEÚDO ================= -->
 <main>
 
 <section class="modelos">
@@ -24,7 +51,9 @@
 Cada projeto é único. Os valores podem variar conforme as necessidades do cliente.
 </p>
 
+
 <div class="secao-cards">
+
 
 <!-- LANDING PAGE -->
 <article class="card-servico">
@@ -93,18 +122,18 @@ Consultar valores
 
 </article>
 
+
 </div>
 </section>
 </main>
 
-<!-- ===== RODAPÉ ===== -->
+
+<!-- ================= RODAPÉ ================= -->
 <footer class="rodape">
 <p>
 <i class="fab fa-whatsapp"></i>
 <a href="https://wa.me/5515998458485" target="_blank">(15) 99845-8485</a>
-
 |
-
 <i class="fas fa-envelope"></i>
 <a href="mailto:andradecunhacarolina@gmail.com">
 andradecunhacarolina@gmail.com
@@ -112,9 +141,336 @@ andradecunhacarolina@gmail.com
 </p>
 </footer>
 
+
 <button id="btn-topo" title="Voltar ao topo">↑</button>
 
 <script src="servicos.js"></script>
 
 </body>
 </html>
+```
+
+# ✅ CSS — servicos.css
+
+```css
+/* =========================================
+VARIÁVEIS
+========================================= */
+
+:root{
+--rosa-claro:#ff8080;
+--rosa-escuro:#ff4d4d;
+--bege-claro:#f8f3f2;
+--preto:#3e2f2f;
+--verde-whatsapp:#25d366;
+--dourado-claro:#d4af37;
+}
+
+
+/* =========================================
+RESET
+========================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--bege-claro);
+color:var(--preto);
+padding-top:70px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+
+/* =========================================
+HEADER
+========================================= */
+
+.topo{
+position:fixed;
+top:0;
+width:100%;
+background:var(--rosa-claro);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+z-index:1000;
+}
+
+.marca{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:bold;
+font-size:1.2rem;
+color:white;
+text-decoration:none;
+}
+
+.icone-circulo{
+background:var(--rosa-escuro);
+border:2px solid var(--dourado-claro);
+border-radius:50%;
+width:32px;
+height:32px;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.icone-circulo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+/* =========================================
+MENU (EXATAMENTE COMO PEDIU)
+========================================= */
+
+.menu{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.btn-menu{
+display:none;
+background:none;
+border:none;
+font-size:1.8rem;
+color:white;
+cursor:pointer;
+margin-left:auto;
+z-index:1001;
+}
+
+.menu ul{
+display:flex;
+gap:1rem;
+list-style:none;
+transition:max-height .3s ease;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:color .3s;
+word-wrap:break-word;
+overflow-wrap:break-word;
+}
+
+.menu a:hover,
+.menu a.ativo{
+color:var(--preto);
+}
+
+
+/* =========================================
+CONTEÚDO
+========================================= */
+
+main{
+max-width:1100px;
+margin:2rem auto;
+padding:0 1rem;
+}
+
+h2{
+text-align:center;
+font-size:2rem;
+color:var(--rosa-escuro);
+margin-bottom:1rem;
+border-bottom:2px solid var(--rosa-escuro);
+padding-bottom:.3rem;
+}
+
+.observacao{
+max-width:700px;
+margin:0 auto 2rem;
+text-align:center;
+font-size:.85rem;
+background:#fff8f8;
+padding:1rem 1.5rem;
+border-left:4px solid var(--rosa-escuro);
+border-radius:6px;
+line-height:1.6;
+}
+
+
+/* =========================================
+CARDS
+========================================= */
+
+.secao-cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:1.5rem;
+}
+
+.card-servico{
+background:white;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.07);
+width:300px;
+padding:1.5rem;
+display:flex;
+flex-direction:column;
+gap:.7rem;
+transition:.3s ease;
+}
+
+.card-servico:hover{
+transform:translateY(-8px);
+box-shadow:0 14px 30px rgba(255,77,77,0.22);
+}
+
+.card-servico h4{
+color:var(--rosa-escuro);
+font-size:1.2rem;
+}
+
+.card-servico p{
+font-size:.9rem;
+color:#555;
+line-height:1.5;
+}
+
+
+/* =========================================
+LISTAS
+========================================= */
+
+.lista-site,
+.lista-word{
+padding-left:1rem;
+font-size:.9rem;
+margin-bottom:1rem;
+}
+
+.lista-site li,
+.lista-word li{
+margin-bottom:.4rem;
+}
+
+.titulo-lista{
+font-weight:600;
+margin-top:.4rem;
+}
+
+.sub-lista{
+margin:.4rem 0 .7rem 1rem;
+padding-left:.8rem;
+border-left:3px solid var(--rosa-claro);
+}
+
+
+/* =========================================
+BOTÃO WHATSAPP
+========================================= */
+
+.btn-whatsapp{
+margin-top:auto;
+background:var(--verde-whatsapp);
+color:white;
+padding:.6rem 1.1rem;
+border-radius:10px;
+text-decoration:none;
+font-size:.9rem;
+font-weight:600;
+text-align:center;
+transition:.3s;
+}
+
+.btn-whatsapp:hover{
+background:#1ebe57;
+}
+
+
+/* =========================================
+RODAPÉ
+========================================= */
+
+.rodape{
+margin-top:3rem;
+padding:1rem;
+text-align:center;
+font-size:.9rem;
+color:#666;
+border-top:1px solid #eee;
+}
+
+.rodape a{
+color:#666;
+text-decoration:none;
+}
+
+.rodape a:hover{
+color:var(--rosa-escuro);
+}
+
+
+/* =========================================
+BOTÃO TOPO
+========================================= */
+
+#btn-topo{
+position:fixed;
+bottom:30px;
+right:30px;
+padding:.7rem 1rem;
+font-size:1.3rem;
+background:var(--rosa-escuro);
+border:none;
+border-radius:50%;
+color:white;
+cursor:pointer;
+box-shadow:0 2px 6px rgb(255 77 77 / .6);
+}
+
+
+/* =========================================
+RESPONSIVO
+========================================= */
+
+@media(max-width:700px){
+
+.btn-menu{
+display:block;
+}
+
+.menu ul{
+flex-direction:column;
+position:fixed;
+top:60px;
+right:0;
+background:var(--rosa-claro);
+width:220px;
+max-height:0;
+overflow:hidden;
+padding:0 1rem;
+transition:max-height .3s ease;
+}
+
+.menu ul.ativo{
+max-height:500px;
+padding:1rem;
+}
+
+.card-servico{
+width:90%;
+max-width:320px;
+}
+}
